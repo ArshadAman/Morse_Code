@@ -46,31 +46,26 @@ def decrypt(morse_code):
 
 
 def main():
+    print()
     message = input("Enter your message: ").upper()
+    print()
     e_or_d = input("Encryption(e) or decreption(d): ").lower()
-    
+    print()
     if e_or_d == "e":
-        print(f"Here is the Morse Code: {encrypt(message)}")
+        print(f"Here is the Morse Code: {encrypt(message)}\n")
     elif e_or_d == "d":
-        print(f"Here is the plain text: {decrypt(message)}")
+        print(f"Here is the plain text: {decrypt(message)}\n")
     else:
-        print("Invalid Input")
+        print("Invalid Input\n")
         main()
 
 if __name__ == "__main__":
     main()
     while True:
         run_again = input("Do you want to run program again. Press any to run again (q to quit): ")
+        print()
         if run_again == "q":
-            print("Thank you for using me.")
+            print("Thank you for using me.\n")
             break
         else:
             main()
-
-
-
-
-    
-
-
-
