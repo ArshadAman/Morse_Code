@@ -15,6 +15,7 @@ MORSE_CODE_DICT = { 'A':'.-', 'B':'-...',
                     '(':'-.--.', ')':'-.--.-'}
 
 MORSE_INVERTED = {value: key for key, value in MORSE_CODE_DICT.items()}
+MORSE_INVERTED[""] = " "
 
 def encrypt(text):
     morse_code = ""
@@ -28,11 +29,19 @@ def encrypt(text):
 
 def decrypt(morse_code):
     text = ""
+    morse_text=""
+    morse_list = []
+    morse_code+= " "
+
     for morse in morse_code:
         if morse != " ":
-            text += text + MORSE_INVERTED[morse]+ " "
+            morse_text += morse
         else:
-            text += " "
+            morse_list.append(morse_text)
+            morse_text = ""
+    for item in morse_list:
+        text += MORSE_INVERTED[item]
+    return text.title()
 
 
 
@@ -50,6 +59,14 @@ def main():
 
 if __name__ == "__main__":
     main()
+    while True:
+        run_again = input("Do you want to run program again. Press any to run again (q to quit): ")
+        if run_again == "q":
+            print("Thank you for using me.")
+            break
+        else:
+            main()
+
 
 
 
