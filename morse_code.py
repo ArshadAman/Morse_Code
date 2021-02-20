@@ -50,9 +50,9 @@ def main():
     e_or_d = input("Encryption(e) or decreption(d): ").lower()
     
     if e_or_d == "e":
-        print(encrypt(message))
+        print(f"Here is the Morse Code: {encrypt(message)}")
     elif e_or_d == "d":
-        print(decrypt(message))
+        print(f"Here is the plain text: {decrypt(message)}")
     else:
         print("Invalid Input")
         main()
