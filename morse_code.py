@@ -13,10 +13,13 @@ MORSE_CODE_DICT = { 'A':'.-', 'B':'-...',
                     '0':'-----', ', ':'--..--', '.':'.-.-.-', 
                     '?':'..--..', '/':'-..-.', '-':'-....-', 
                     '(':'-.--.', ')':'-.--.-'}
+#morse code provided in dictionary. Dictionary is a non-primitive data type in python
 
 MORSE_INVERTED = {value: key for key, value in MORSE_CODE_DICT.items()}
 MORSE_INVERTED[""] = " "
 
+# function for encryption
+# input in text
 def encrypt(text):
     morse_code = ""
     for letter in text:
@@ -27,6 +30,8 @@ def encrypt(text):
 
     return morse_code
 
+  # function for decryption
+  # output in morse code
 def decrypt(morse_code):
     text = ""
     morse_text=""
