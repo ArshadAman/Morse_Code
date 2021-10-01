@@ -68,6 +68,8 @@ if __name__ == "__main__":
     main()
     while True:
         run_again = input("Do you want to run program again. Press any to run again (q to quit): ")
+        run_again = run_again.lower()
+        run_again = run_again.trim()
         print()
         if run_again == "q":
             print("Thank you for using me.\n")
