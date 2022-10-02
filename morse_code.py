@@ -1,3 +1,6 @@
+import pyperclip as pc
+
+
 MORSE_CODE_DICT = { 'A':'.-', 'B':'-...', 
                     'C':'-.-.', 'D':'-..', 'E':'.', 
                     'F':'..-.', 'G':'--.', 'H':'....', 
@@ -28,6 +31,8 @@ def encrypt(text):
         else:
             morse_code += " "
 
+    # copy excrypted text to clipboard
+    pc.copy(morse_code)
     return morse_code
 
   # function for decryption
@@ -46,6 +51,9 @@ def decrypt(morse_code):
             morse_text = ""
     for item in morse_list:
         text += MORSE_INVERTED[item]
+    
+    # copy decrypted text to clipboard
+    pc.copy(text.title())
     return text.title()
 
 
