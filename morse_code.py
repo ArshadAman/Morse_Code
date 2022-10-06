@@ -62,15 +62,20 @@ def main():
     print()
     message = input("Enter your message: ").upper()
     print()
-    e_or_d = input("Encryption(e) or decreption(d): ").lower()
-    print()
-    if e_or_d == "e":
+    while(true)
+    {
+      e_or_d = input("Encryption(e) or decreption(d): ").lower()
+      print()
+      if e_or_d == "e":
         print(f"Here is the Morse Code: {encrypt(message)}\n")
-    elif e_or_d == "d":
+        break
+      elif e_or_d == "d":
         print(f"Here is the plain text: {decrypt(message)}\n")
-    else:
+        break
+      else:
         print("Invalid Input\n")
-        main()
+    }
+    main()
 
 if __name__ == "__main__":
     main()
