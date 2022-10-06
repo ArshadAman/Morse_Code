@@ -2,6 +2,9 @@
 This is a python based script to change the text to the morse code.
 This script runs on python 3.6.x version for above
 
+Some basics about morse code. Morse code encodes text to signal sequences of two different durations.
+Here is a complete explanation about it: https://en.wikipedia.org/wiki/Morse_code
+
 ## Installation
 
 Run the following code in terminal/cmd to install required python dependencies
