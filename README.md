@@ -20,3 +20,5 @@ If on Linux, you may need to run the following command in terminal to fix copy t
 To run the python file use the following command
 
 `python3 morse_code.py` or `python morse_code.py`
+
+Hope you like it❤️
